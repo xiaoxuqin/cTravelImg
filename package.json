@@ -1,0 +1,28 @@
+{
+  "name": "cTravelImg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoxuqin/cTravelImg.git"
+  },
+  "keywords": [],
+  "author": "xiaoxuqin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoxuqin/cTravelImg/issues"
+  },
+  "homepage": "https://github.com/xiaoxuqin/cTravelImg#readme",
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^3.1.0"
+  }
+}
