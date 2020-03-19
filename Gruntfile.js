@@ -16,18 +16,25 @@ module.exports = function (grunt) {
         cssmin:{
             'dist/img.css':'img.css'
         },
-        copy: {
-            img: {
-                src:['img/*.{png, jpg, gif}'],
-                dest: 'dist/'
+        imagemin:{
+            dist:{
+                options:{
+                    optimizationLevel:1
+                },
+                files:[{
+                    expand:true,
+                    cwd:'./img',
+                    src:['**/*.{png,jpg,jpeg}'],
+                    dest:'dist/img/'
+                }]
             }
-        }        
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-
-    grunt.registerTask('default', ['clean','copy', 'cssmin', 'htmlmin']);
+   
+    grunt.registerTask('default', ['clean','imagemin','cssmin', 'htmlmin']);
 }
